@@ -1,0 +1,23 @@
+body{background:#fff;font-size:13px;text-shadow:0 1px 0 #fff}
+header{width:100%;height:50px;background:#3da0c0;border-bottom:4px solid #368fab;}
+header hgroup{height:100%;display:inline-block;width:300px;}
+header hgroup h1,header hgroup h2{font-size:14px;line-height:50px;color:#fff;text-shadow:0 1px 0 #368fab;display:inline-block}
+header hgroup h2{font-weight:normal;margin-left:6px}
+header nav{height:100%;display:inline-block;width:640px;}
+header nav ul{list-style-type:none;}
+header nav ul li{display:inline-block;line-height:50px;padding:0 5px;margin-right:20px;}
+header nav ul li a{text-shadow:0 1px 0 #368fab;line-height:38px;color:#d8ecf3;font-weight:bold;}
+header nav ul li a:hover{color:#fff;text-decoration:none}
+header nav ul li.active a{color:#fff}
+#main{margin-top:20px;}
+#main h1{font-size:13px;width:100%;border-bottom:1px solid #e5e5e5;line-height:20px;margin-bottom:20px;color:#2b3632}
+#main h2{font-size:12px;line-height:20px;color:#2b3632}
+#main .avatar{width:20px;height:20px;display:inline-block;border-radius:10px;line-height:30px;margin-right:10px;box-shadow:0 1px 0 #fff}
+#main .content form .possibility{margin-bottom:5px}
+#main .content form .help-block{margin-top:0}
+#main .sidebar .user{height:30px;width:240px;line-height:30px;}
+#main .sidebar .user p{height:20px;width:190px;display:inline-block}
+footer{text-align:center;font-size:85%;margin:20px;color:#999;}
+footer a{color:#67686d;text-decoration:underline;}
+footer a:hover{color:#070000}
+a{color:#368fab;text-shadow:0 1px 0 #fff}

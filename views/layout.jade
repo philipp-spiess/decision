@@ -1,0 +1,41 @@
+!!! 5
+html
+  head
+    title Decision
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='/javascripts/jquery.relatize_date.js')
+    script(src='/javascripts/app.js')
+
+  body
+    header
+      .container
+        hgroup
+          h1 Decision
+          h2 direct democracy for your startup
+        nav
+          ul
+            each o in everyauth.github.user.orgs
+              - if ( typeof org != 'undefined' && org == o.login)
+                li.active 
+                  a(href='/#{o.login}')= o.login
+              - else 
+                li 
+                  a(href='/#{o.login}')= o.login
+
+    #main.container
+      .row
+        .span9.content!= body
+        .span3.sidebar
+          h1 Sidebar
+          .user
+            img.avatar(src=everyauth.github.user.avatar_url)
+            p 
+              | Logged in as 
+              a(href=everyauth.github.user.html_url)= everyauth.github.user.name
+
+    footer 
+      | Fork Decision on 
+      a(href='https://github.com/philipp-spiess/decision') GitHub
+      | .

@@ -1,0 +1,41 @@
+h1= decision.title
+input(type='hidden', name='_id', value=decision._id)
+input(type='hidden', name='org', value=org)
+
+ul
+  li
+    strong Creator: 
+    a(href=decision.creator.url)
+      img.avatar(src=decision.creator.avatar)
+      span= decision.creator.name
+  li
+    strong Date: 
+    | #{decision.relativeDate}
+br
+.alert.alert-error.hide
+  strong Oh snap!
+  span
+.wrapper
+  table.possibilities.table.table-striped.table-bordered
+    thead
+      tr
+        th(style='width:10px') #
+        th Name
+        th Voters
+        th(style='width:60px')
+    tbody
+      each possibility, i in decision.possibilities
+        tr
+          td= i + 1
+          td= possibility.text
+          td
+            each voter in possibility.voters
+              a(href=voter.url, title=voter.name)
+                img.avatar(src=voter.avatar)
+          td
+            - if(voted_for == i)
+              button.btn.btn-mini.btn-inverse.vote(data-index=i, disabled) Vote for
+            - else
+              button.btn.btn-mini.btn-inverse.vote(data-index=i) Vote for
+
+a(href='/#{org}') View all the decisions from #{org}.

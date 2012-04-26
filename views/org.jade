@@ -1,0 +1,45 @@
+h1 Create a new decision for #{org}
+form.form-horizontal.new-decision
+  .alert.alert-error.hide
+    strong Oh snap!
+    span
+  input(type='hidden', name='org', value=org)
+  fieldset
+    .control-group
+      label.control-label(for='title') Title
+      .controls
+        input#title.input-xlarge(type='text', name='title')
+    .control-group
+      label.control-label Possibilities
+      .controls
+        input#title.input-xlarge.possibility(type='text', name='possibilities[]')
+        p.help-block
+          button.btn.btn-small.add Add a new possibility
+    .form-actions
+      button.btn.btn-info.create Create
+  
+h1 All decisions
+table.decisions.table.table-striped.table-bordered
+  thead
+    tr
+      th Decision
+      th Creator
+      th Date
+      th Answers
+      th
+  tbody
+    - if (decisions.length > 0)
+      each decision in decisions
+        tr
+          td= decision.title
+          td
+            a(href=decision.creator.url)
+              img.avatar(src=decision.creator.avatar)
+              | #{decision.creator.name}
+          td= decision.relativeDate
+          td= decision.count
+          td
+            a.btn.btn-mini.btn-inverse(href='/#{org}/#{decision._id}') Decide
+    - else
+      tr
+        td(colspan=5) No decision yet.
