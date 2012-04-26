@@ -1,7 +1,7 @@
 # Decision
 *Direct democracy for your startup*
 
-Create decisions and let your employees decide which track to choose. Absolutely no setup needed. Decision detects your GitHub organizations members and let them vote. It can be hosted on Heroku.
+Create decisions and let your employees decide which track to choose. Absolutely no setup needed. Decision detects your GitHub organizations members and let them vote.
 
 Feel free to check it out: [dec.herokuapp.com](http://dec.herokuapp.com).
 
@@ -24,8 +24,8 @@ This is currently supported:
 
 ## Licence
 
-MIT, feel free to send me pull requests!
+MIT
 
 ## Like it?
 
-Cool. Feel free to send me a line at [@PhilippSpiess](http://twitter.com/PhilippSpiess).
+Thanks. You may want to send me a line via Twitter ([@PhilippSpiess](http://twitter.com/PhilippSpiess)) or create some cool pull requests.
